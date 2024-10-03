@@ -10,7 +10,7 @@ build_time_vars = {'ABIFLAGS': '',
  'ANDROID_API_LEVEL': 0,
  'AR': 'x86_64-conda_cos6-linux-gnu-ar',
  'ARFLAGS': 'rcs',
- 'BASECFLAGS': '-fno-strict-overflow',
+ 'BASECFLAGS': '-fno-strict-overflow -Wsign-compare',
  'BASECPPFLAGS': '-IObjects -IInclude -IPython',
  'BASEMODLIBS': '',
  'BINDIR': '/media/ryxen/New Volume/MLprojects/venv/bin',
@@ -35,9 +35,10 @@ build_time_vars = {'ABIFLAGS': '',
  'BYTESTR_DEPS': '\\',
  'CC': 'x86_64-conda_cos6-linux-gnu-gcc -pthread',
  'CCSHARED': '-fPIC',
- 'CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall -march=nocona '
-           '-mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong '
-           '-fno-plt -O2 -ffunction-sections -pipe -isystem '
+ 'CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall '
+           '-march=nocona -mtune=haswell -ftree-vectorize -fPIC '
+           '-fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe '
+           '-isystem '
            '/media/ryxen/New Volume/MLprojects/venv/include '
            ' '
            ' '
@@ -51,8 +52,8 @@ build_time_vars = {'ABIFLAGS': '',
            '   ',
  'CFLAGSFORSHARED': '',
  'CFLAGS_ALIASING': '',
- 'CODECS_COMMON_HEADERS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                          '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'CODECS_COMMON_HEADERS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                          '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'COMPILEALL_OPTS': '-j0',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
@@ -66,7 +67,10 @@ build_time_vars = {'ABIFLAGS': '',
                      ' ',
  'CONFIGURE_CFLAGS_NODIST': '-fno-semantic-interposition  '
                             '  '
-                            ' -g -std=c11 '
+                            ' -g -std=c11 -Wextra '
+                            '-Wno-unused-parameter '
+                            '-Wno-missing-field-initializers '
+                            '-Wstrict-prototypes '
                             '-Werror=implicit-function-declaration '
                             '-fvisibility=hidden',
  'CONFIGURE_CPPFLAGS': '-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem '
@@ -92,7 +96,7 @@ build_time_vars = {'ABIFLAGS': '',
                 "'--with-tcltk-libs=-L/media/ryxen/New Volume/MLprojects/venv/lib "
                 "-ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto=full' "
                 "'--enable-optimizations' "
-                "'-oldincludedir=/croot/python-split_1696267002197/_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/include' "
+                "'-oldincludedir=/croot/python-split_1726164927291/_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/include' "
                 "'--disable-shared' 'PROFILE_TASK=-m test --pgo' "
                 "'build_alias=x86_64-conda_cos6-linux-gnu' "
                 "'host_alias=x86_64-conda_cos6-linux-gnu' "
@@ -114,18 +118,18 @@ build_time_vars = {'ABIFLAGS': '',
                 "'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem "
                 '/media/ryxen/New Volume/MLprojects/venv/include '
                 "-I/media/ryxen/New Volume/MLprojects/venv/include' "
-                "'CPP=/croot/python-split_1696267002197/_build_env/bin/x86_64-conda_cos6-linux-gnu-cpp'",
+                "'CPP=/croot/python-split_1726164927291/_build_env/bin/x86_64-conda_cos6-linux-gnu-cpp'",
  'CONFINCLUDEDIR': '/media/ryxen/New Volume/MLprojects/venv/include',
  'CONFINCLUDEPY': '/media/ryxen/New Volume/MLprojects/venv/include/python3.12',
  'COREPYTHONPATH': '',
- 'COVERAGE_INFO': '/croot/python-split_1696267002197/work/build-static/coverage.info',
+ 'COVERAGE_INFO': '/croot/python-split_1726164927291/work/build-static/coverage.info',
  'COVERAGE_LCOV_OPTIONS': '--rc lcov_branch_coverage=1',
- 'COVERAGE_REPORT': '/croot/python-split_1696267002197/work/build-static/lcov-report',
+ 'COVERAGE_REPORT': '/croot/python-split_1726164927291/work/build-static/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--rc lcov_branch_coverage=1 --branch-coverage '
                             '--title "CPython 3.12 LCOV report [commit $(shell '
                             ')]"',
  'CPPFLAGS': '-IObjects -IInclude -IPython -I. '
-             '-I/croot/python-split_1696267002197/work/Include -DNDEBUG '
+             '-I/croot/python-split_1726164927291/work/Include -DNDEBUG '
              '-D_FORTIFY_SOURCE=2 -O2 -isystem '
              '/media/ryxen/New Volume/MLprojects/venv/include '
              '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -134,9 +138,9 @@ build_time_vars = {'ABIFLAGS': '',
              '-I/media/ryxen/New Volume/MLprojects/venv/include',
  'CXX': 'x86_64-conda_cos6-linux-gnu-c++ -pthread',
  'DEEPFREEZE_C': 'Python/deepfreeze/deepfreeze.c',
- 'DEEPFREEZE_DEPS': '/croot/python-split_1696267002197/work/Tools/build/deepfreeze.py '
+ 'DEEPFREEZE_DEPS': '/croot/python-split_1726164927291/work/Tools/build/deepfreeze.py '
                     '_bootstrap_python '
-                    '/croot/python-split_1696267002197/work/Programs/_freeze_module.py '
+                    '/croot/python-split_1726164927291/work/Programs/_freeze_module.py '
                     '\\',
  'DEEPFREEZE_OBJS': 'Python/deepfreeze/deepfreeze.o',
  'DESTDIRS': '/media/ryxen/New Volume/MLprojects/venv '
@@ -177,11 +181,11 @@ build_time_vars = {'ABIFLAGS': '',
  'FILEMODE': 644,
  'FLOAT_WORDS_BIGENDIAN': 0,
  'FREEZE_MODULE': './_bootstrap_python '
-                  '/croot/python-split_1696267002197/work/Programs/_freeze_module.py',
+                  '/croot/python-split_1726164927291/work/Programs/_freeze_module.py',
  'FREEZE_MODULE_BOOTSTRAP': './Programs/_freeze_module',
  'FREEZE_MODULE_BOOTSTRAP_DEPS': 'Programs/_freeze_module',
  'FREEZE_MODULE_DEPS': '_bootstrap_python '
-                       '/croot/python-split_1696267002197/work/Programs/_freeze_module.py',
+                       '/croot/python-split_1726164927291/work/Programs/_freeze_module.py',
  'FROZEN_FILES_IN': '\\',
  'FROZEN_FILES_OUT': '\\',
  'GETPGRP_HAVE_ARG': 0,
@@ -495,6 +499,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_RENAMEAT': 1,
  'HAVE_RL_APPEND_HISTORY': 1,
  'HAVE_RL_CATCH_SIGNAL': 1,
+ 'HAVE_RL_COMPDISP_FUNC_T': 1,
  'HAVE_RL_COMPLETION_APPEND_CHARACTER': 1,
  'HAVE_RL_COMPLETION_DISPLAY_MATCHES_HOOK': 1,
  'HAVE_RL_COMPLETION_MATCHES': 1,
@@ -721,8 +726,8 @@ build_time_vars = {'ABIFLAGS': '',
  'LIBDEST': '/media/ryxen/New Volume/MLprojects/venv/lib/python3.12',
  'LIBDIR': '/media/ryxen/New Volume/MLprojects/venv/lib',
  'LIBEXPAT_A': 'Modules/expat/libexpat.a',
- 'LIBEXPAT_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall -march=nocona '
-                    '-mtune=haswell -ftree-vectorize -fPIC '
+ 'LIBEXPAT_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall '
+                    '-march=nocona -mtune=haswell -ftree-vectorize -fPIC '
                     '-fstack-protector-strong -fno-plt -O2 -ffunction-sections '
                     '-pipe -isystem '
                     '/media/ryxen/New Volume/MLprojects/venv/include '
@@ -738,12 +743,13 @@ build_time_vars = {'ABIFLAGS': '',
                     '  '
                     '  -fno-semantic-interposition '
                     '   '
-                    ' -g -std=c11 '
-                    '-Werror=implicit-function-declaration -fvisibility=hidden '
-                    '  '
-                    '-I/croot/python-split_1696267002197/work/Include/internal '
+                    ' -g -std=c11 -Wextra '
+                    '-Wno-unused-parameter -Wno-missing-field-initializers '
+                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                    '-fvisibility=hidden   '
+                    '-I/croot/python-split_1726164927291/work/Include/internal '
                     '-IObjects -IInclude -IPython -I. '
-                    '-I/croot/python-split_1696267002197/work/Include -DNDEBUG '
+                    '-I/croot/python-split_1726164927291/work/Include -DNDEBUG '
                     '-D_FORTIFY_SOURCE=2 -O2 -isystem '
                     '/media/ryxen/New Volume/MLprojects/venv/include '
                     '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -753,11 +759,12 @@ build_time_vars = {'ABIFLAGS': '',
                     '-fPIC',
  'LIBEXPAT_HEADERS': '\\',
  'LIBEXPAT_OBJS': '\\',
- 'LIBHACL_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_hacl/include '
+ 'LIBHACL_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_hacl/include '
                    '-D_BSD_SOURCE -D_DEFAULT_SOURCE -fno-strict-overflow '
-                   '-DNDEBUG -O2 -Wall -march=nocona -mtune=haswell '
-                   '-ftree-vectorize -fPIC -fstack-protector-strong -fno-plt '
-                   '-O2 -ffunction-sections -pipe -isystem '
+                   '-Wsign-compare -DNDEBUG -O2 -Wall -march=nocona '
+                   '-mtune=haswell -ftree-vectorize -fPIC '
+                   '-fstack-protector-strong -fno-plt -O2 -ffunction-sections '
+                   '-pipe -isystem '
                    '/media/ryxen/New Volume/MLprojects/venv/include '
                    ' '
                    ' '
@@ -771,11 +778,13 @@ build_time_vars = {'ABIFLAGS': '',
                    '   '
                    ' -fno-semantic-interposition  '
                    '   '
-                   '-g -std=c11 -Werror=implicit-function-declaration '
-                   '-fvisibility=hidden   '
-                   '-I/croot/python-split_1696267002197/work/Include/internal '
+                   '-g -std=c11 -Wextra -Wno-unused-parameter '
+                   '-Wno-missing-field-initializers -Wstrict-prototypes '
+                   '-Werror=implicit-function-declaration -fvisibility=hidden '
+                   '  '
+                   '-I/croot/python-split_1726164927291/work/Include/internal '
                    '-IObjects -IInclude -IPython -I. '
-                   '-I/croot/python-split_1696267002197/work/Include -DNDEBUG '
+                   '-I/croot/python-split_1726164927291/work/Include -DNDEBUG '
                    '-D_FORTIFY_SOURCE=2 -O2 -isystem '
                    '/media/ryxen/New Volume/MLprojects/venv/include '
                    '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -789,10 +798,10 @@ build_time_vars = {'ABIFLAGS': '',
  'LIBHACL_SHA2_OBJS': '\\',
  'LIBM': '-lm',
  'LIBMPDEC_A': 'Modules/_decimal/libmpdec/libmpdec.a',
- 'LIBMPDEC_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_decimal/libmpdec '
+ 'LIBMPDEC_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_decimal/libmpdec '
                     '-DCONFIG_64=1 -DANSI=1 -DHAVE_UINT128_T=1 '
-                    '-fno-strict-overflow -DNDEBUG -O2 -Wall -march=nocona '
-                    '-mtune=haswell -ftree-vectorize -fPIC '
+                    '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall '
+                    '-march=nocona -mtune=haswell -ftree-vectorize -fPIC '
                     '-fstack-protector-strong -fno-plt -O2 -ffunction-sections '
                     '-pipe -isystem '
                     '/media/ryxen/New Volume/MLprojects/venv/include '
@@ -808,12 +817,13 @@ build_time_vars = {'ABIFLAGS': '',
                     '  '
                     '  -fno-semantic-interposition '
                     '   '
-                    ' -g -std=c11 '
-                    '-Werror=implicit-function-declaration -fvisibility=hidden '
-                    '  '
-                    '-I/croot/python-split_1696267002197/work/Include/internal '
+                    ' -g -std=c11 -Wextra '
+                    '-Wno-unused-parameter -Wno-missing-field-initializers '
+                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                    '-fvisibility=hidden   '
+                    '-I/croot/python-split_1726164927291/work/Include/internal '
                     '-IObjects -IInclude -IPython -I. '
-                    '-I/croot/python-split_1696267002197/work/Include -DNDEBUG '
+                    '-I/croot/python-split_1726164927291/work/Include -DNDEBUG '
                     '-D_FORTIFY_SOURCE=2 -O2 -isystem '
                     '/media/ryxen/New Volume/MLprojects/venv/include '
                     '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -851,7 +861,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MACOSX_DEPLOYMENT_TARGET': '',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 1,
- 'MAKESETUP': '/croot/python-split_1696267002197/work/Modules/makesetup',
+ 'MAKESETUP': '/croot/python-split_1726164927291/work/Modules/makesetup',
  'MANDIR': '/media/ryxen/New Volume/MLprojects/venv/share/man',
  'MKDIR_P': '/usr/bin/mkdir -p',
  'MODBUILT_NAMES': 'array  _asyncio  _bisect  _contextvars  _csv  _heapq  '
@@ -912,7 +922,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_BINASCII_LDFLAGS': '-L/media/ryxen/New Volume/MLprojects/venv/lib '
                             '-lz',
  'MODULE_BINASCII_STATE': 'yes',
- 'MODULE_CMATH_DEPS': '/croot/python-split_1696267002197/work/Modules/_math.h',
+ 'MODULE_CMATH_DEPS': '/croot/python-split_1726164927291/work/Modules/_math.h',
  'MODULE_CMATH_LDFLAGS': '-lm',
  'MODULE_CMATH_STATE': 'yes',
  'MODULE_DEPS_SHARED': 'Modules/config.c',
@@ -923,7 +933,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_FCNTL_STATE': 'yes',
  'MODULE_GRP_STATE': 'yes',
  'MODULE_ITERTOOLS_LDFLAGS': '',
- 'MODULE_MATH_DEPS': '/croot/python-split_1696267002197/work/Modules/_math.h',
+ 'MODULE_MATH_DEPS': '/croot/python-split_1726164927291/work/Modules/_math.h',
  'MODULE_MATH_LDFLAGS': '-lm',
  'MODULE_MATH_STATE': 'yes',
  'MODULE_MMAP_STATE': 'yes',
@@ -950,8 +960,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_TERMIOS_STATE': 'yes',
  'MODULE_TIME_LDFLAGS': '',
  'MODULE_TIME_STATE': 'yes',
- 'MODULE_UNICODEDATA_DEPS': '/croot/python-split_1696267002197/work/Modules/unicodedata_db.h '
-                            '/croot/python-split_1696267002197/work/Modules/unicodename_db.h',
+ 'MODULE_UNICODEDATA_DEPS': '/croot/python-split_1726164927291/work/Modules/unicodedata_db.h '
+                            '/croot/python-split_1726164927291/work/Modules/unicodename_db.h',
  'MODULE_UNICODEDATA_STATE': 'yes',
  'MODULE_XXLIMITED_35_STATE': 'yes',
  'MODULE_XXLIMITED_STATE': 'yes',
@@ -964,56 +974,56 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__ASYNCIO_STATE': 'yes',
  'MODULE__BISECT_STATE': 'yes',
  'MODULE__BLAKE2_CFLAGS': '',
- 'MODULE__BLAKE2_DEPS': '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2-config.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2-impl.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2b-load-sse2.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2b-load-sse41.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2b-ref.c '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2b-round.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2b.c '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2s-load-sse2.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2s-load-sse41.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2s-load-xop.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2s-ref.c '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2s-round.h '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/impl/blake2s.c '
-                        '/croot/python-split_1696267002197/work/Modules/_blake2/blake2module.h '
-                        '/croot/python-split_1696267002197/work/Modules/hashlib.h',
+ 'MODULE__BLAKE2_DEPS': '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2-config.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2-impl.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2b-load-sse2.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2b-load-sse41.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2b-ref.c '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2b-round.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2b.c '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2s-load-sse2.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2s-load-sse41.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2s-load-xop.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2s-ref.c '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2s-round.h '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/impl/blake2s.c '
+                        '/croot/python-split_1726164927291/work/Modules/_blake2/blake2module.h '
+                        '/croot/python-split_1726164927291/work/Modules/hashlib.h',
  'MODULE__BLAKE2_LDFLAGS': '',
  'MODULE__BLAKE2_STATE': 'yes',
  'MODULE__BZ2_CFLAGS': '',
  'MODULE__BZ2_LDFLAGS': '-lbz2',
  'MODULE__BZ2_STATE': 'yes',
- 'MODULE__CODECS_CN_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_cn.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_CN_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_cn.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_CN_STATE': 'yes',
- 'MODULE__CODECS_HK_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_hk.h  '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_HK_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_hk.h  '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_HK_STATE': 'yes',
- 'MODULE__CODECS_ISO2022_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
-                                '/croot/python-split_1696267002197/work/Modules/cjkcodecs/alg_jisx0201.h '
-                                '/croot/python-split_1696267002197/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
-                                '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                                '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_ISO2022_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
+                                '/croot/python-split_1726164927291/work/Modules/cjkcodecs/alg_jisx0201.h '
+                                '/croot/python-split_1726164927291/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
+                                '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                                '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_ISO2022_STATE': 'yes',
- 'MODULE__CODECS_JP_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/alg_jisx0201.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_jp.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_JP_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/alg_jisx0201.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_jp.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_JP_STATE': 'yes',
- 'MODULE__CODECS_KR_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_kr.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_KR_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_kr.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_KR_STATE': 'yes',
  'MODULE__CODECS_LDFLAGS': '',
- 'MODULE__CODECS_TW_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/mappings_tw.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/croot/python-split_1696267002197/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_TW_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/mappings_tw.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/croot/python-split_1726164927291/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_TW_STATE': 'yes',
  'MODULE__COLLECTIONS_LDFLAGS': '',
  'MODULE__CONTEXTVARS_STATE': 'yes',
@@ -1023,7 +1033,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__CSV_STATE': 'yes',
  'MODULE__CTYPES_CFLAGS': '-fno-strict-overflow '
                           '-I/media/ryxen/New Volume/MLprojects/venv/include',
- 'MODULE__CTYPES_DEPS': '/croot/python-split_1696267002197/work/Modules/_ctypes/ctypes.h',
+ 'MODULE__CTYPES_DEPS': '/croot/python-split_1726164927291/work/Modules/_ctypes/ctypes.h',
  'MODULE__CTYPES_LDFLAGS': '-L/media/ryxen/New Volume/MLprojects/venv/lib '
                            '-lffi -ldl',
  'MODULE__CTYPES_MALLOC_CLOSURE': '',
@@ -1065,25 +1075,25 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__DATETIME_LDFLAGS': '-lm',
  'MODULE__DATETIME_STATE': 'yes',
  'MODULE__DBM_STATE': 'missing',
- 'MODULE__DECIMAL_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_decimal/libmpdec '
+ 'MODULE__DECIMAL_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_decimal/libmpdec '
                            '-DCONFIG_64=1 -DANSI=1 -DHAVE_UINT128_T=1',
- 'MODULE__DECIMAL_DEPS': '/croot/python-split_1696267002197/work/Modules/_decimal/docstrings.h '
+ 'MODULE__DECIMAL_DEPS': '/croot/python-split_1726164927291/work/Modules/_decimal/docstrings.h '
                          '\\ Modules/_decimal/libmpdec/libmpdec.a',
  'MODULE__DECIMAL_LDFLAGS': '-lm Modules/_decimal/libmpdec/libmpdec.a',
  'MODULE__DECIMAL_STATE': 'yes',
  'MODULE__ELEMENTTREE_CFLAGS': '',
- 'MODULE__ELEMENTTREE_DEPS': '/croot/python-split_1696267002197/work/Modules/pyexpat.c',
+ 'MODULE__ELEMENTTREE_DEPS': '/croot/python-split_1726164927291/work/Modules/pyexpat.c',
  'MODULE__ELEMENTTREE_STATE': 'yes',
  'MODULE__FUNCTOOLS_LDFLAGS': '',
  'MODULE__GDBM_STATE': 'missing',
  'MODULE__HASHLIB_CFLAGS': '-I/media/ryxen/New Volume/MLprojects/venv/include',
- 'MODULE__HASHLIB_DEPS': '/croot/python-split_1696267002197/work/Modules/hashlib.h',
+ 'MODULE__HASHLIB_DEPS': '/croot/python-split_1726164927291/work/Modules/hashlib.h',
  'MODULE__HASHLIB_LDFLAGS': '-L/media/ryxen/New Volume/MLprojects/venv/lib   '
                             '-lcrypto',
  'MODULE__HASHLIB_STATE': 'yes',
  'MODULE__HEAPQ_STATE': 'yes',
- 'MODULE__IO_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_io',
- 'MODULE__IO_DEPS': '/croot/python-split_1696267002197/work/Modules/_io/_iomodule.h',
+ 'MODULE__IO_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_io',
+ 'MODULE__IO_DEPS': '/croot/python-split_1726164927291/work/Modules/_io/_iomodule.h',
  'MODULE__IO_LDFLAGS': '',
  'MODULE__IO_STATE': 'yes',
  'MODULE__JSON_STATE': 'yes',
@@ -1093,72 +1103,72 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__LZMA_LDFLAGS': '-L/media/ryxen/New Volume/MLprojects/venv/lib '
                          '-llzma',
  'MODULE__LZMA_STATE': 'yes',
- 'MODULE__MD5_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_hacl/include '
-                       '-I/croot/python-split_1696267002197/work/Modules/_hacl/internal '
+ 'MODULE__MD5_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_hacl/include '
+                       '-I/croot/python-split_1726164927291/work/Modules/_hacl/internal '
                        '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
- 'MODULE__MD5_DEPS': '/croot/python-split_1696267002197/work/Modules/hashlib.h '
+ 'MODULE__MD5_DEPS': '/croot/python-split_1726164927291/work/Modules/hashlib.h '
                      '\\ Modules/_hacl/Hacl_Hash_MD5.h '
                      'Modules/_hacl/Hacl_Hash_MD5.c',
  'MODULE__MD5_STATE': 'yes',
- 'MODULE__MULTIBYTECODEC_DEPS': '/croot/python-split_1696267002197/work/Modules/cjkcodecs/multibytecodec.h',
+ 'MODULE__MULTIBYTECODEC_DEPS': '/croot/python-split_1726164927291/work/Modules/cjkcodecs/multibytecodec.h',
  'MODULE__MULTIBYTECODEC_STATE': 'yes',
- 'MODULE__MULTIPROCESSING_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_multiprocessing',
+ 'MODULE__MULTIPROCESSING_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_multiprocessing',
  'MODULE__MULTIPROCESSING_STATE': 'yes',
  'MODULE__OPCODE_STATE': 'yes',
  'MODULE__OPERATOR_LDFLAGS': '',
  'MODULE__PICKLE_STATE': 'yes',
- 'MODULE__POSIXSHMEM_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_multiprocessing',
+ 'MODULE__POSIXSHMEM_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_multiprocessing',
  'MODULE__POSIXSHMEM_LDFLAGS': '-lrt',
  'MODULE__POSIXSHMEM_STATE': 'yes',
  'MODULE__POSIXSUBPROCESS_STATE': 'yes',
  'MODULE__QUEUE_STATE': 'yes',
  'MODULE__RANDOM_STATE': 'yes',
  'MODULE__SCPROXY_STATE': 'n/a',
- 'MODULE__SHA1_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_hacl/include '
-                        '-I/croot/python-split_1696267002197/work/Modules/_hacl/internal '
+ 'MODULE__SHA1_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_hacl/include '
+                        '-I/croot/python-split_1726164927291/work/Modules/_hacl/internal '
                         '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
- 'MODULE__SHA1_DEPS': '/croot/python-split_1696267002197/work/Modules/hashlib.h '
+ 'MODULE__SHA1_DEPS': '/croot/python-split_1726164927291/work/Modules/hashlib.h '
                       '\\ Modules/_hacl/Hacl_Hash_SHA1.h '
                       'Modules/_hacl/Hacl_Hash_SHA1.c',
  'MODULE__SHA1_STATE': 'yes',
- 'MODULE__SHA2_CFLAGS': '-I/croot/python-split_1696267002197/work/Modules/_hacl/include '
-                        '-I/croot/python-split_1696267002197/work/Modules/_hacl/internal '
+ 'MODULE__SHA2_CFLAGS': '-I/croot/python-split_1726164927291/work/Modules/_hacl/include '
+                        '-I/croot/python-split_1726164927291/work/Modules/_hacl/internal '
                         '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
- 'MODULE__SHA2_DEPS': '/croot/python-split_1696267002197/work/Modules/hashlib.h '
+ 'MODULE__SHA2_DEPS': '/croot/python-split_1726164927291/work/Modules/hashlib.h '
                       '\\ Modules/_hacl/libHacl_Hash_SHA2.a',
  'MODULE__SHA2_STATE': 'yes',
- 'MODULE__SHA3_DEPS': '/croot/python-split_1696267002197/work/Modules/hashlib.h '
+ 'MODULE__SHA3_DEPS': '/croot/python-split_1726164927291/work/Modules/hashlib.h '
                       '\\ Modules/_hacl/Hacl_Hash_SHA3.h '
                       'Modules/_hacl/Hacl_Hash_SHA3.c',
  'MODULE__SHA3_STATE': 'yes',
  'MODULE__SIGNAL_LDFLAGS': '',
- 'MODULE__SOCKET_DEPS': '/croot/python-split_1696267002197/work/Modules/socketmodule.h '
-                        '/croot/python-split_1696267002197/work/Modules/addrinfo.h '
-                        '/croot/python-split_1696267002197/work/Modules/getaddrinfo.c '
-                        '/croot/python-split_1696267002197/work/Modules/getnameinfo.c',
+ 'MODULE__SOCKET_DEPS': '/croot/python-split_1726164927291/work/Modules/socketmodule.h '
+                        '/croot/python-split_1726164927291/work/Modules/addrinfo.h '
+                        '/croot/python-split_1726164927291/work/Modules/getaddrinfo.c '
+                        '/croot/python-split_1726164927291/work/Modules/getnameinfo.c',
  'MODULE__SOCKET_STATE': 'yes',
  'MODULE__SQLITE3_CFLAGS': '-I/media/ryxen/New Volume/MLprojects/venv/include '
-                           '-I/croot/python-split_1696267002197/work/Modules/_sqlite',
- 'MODULE__SQLITE3_DEPS': '/croot/python-split_1696267002197/work/Modules/_sqlite/connection.h '
-                         '/croot/python-split_1696267002197/work/Modules/_sqlite/cursor.h '
-                         '/croot/python-split_1696267002197/work/Modules/_sqlite/microprotocols.h '
-                         '/croot/python-split_1696267002197/work/Modules/_sqlite/module.h '
-                         '/croot/python-split_1696267002197/work/Modules/_sqlite/prepare_protocol.h '
-                         '/croot/python-split_1696267002197/work/Modules/_sqlite/row.h '
-                         '/croot/python-split_1696267002197/work/Modules/_sqlite/util.h',
+                           '-I/croot/python-split_1726164927291/work/Modules/_sqlite',
+ 'MODULE__SQLITE3_DEPS': '/croot/python-split_1726164927291/work/Modules/_sqlite/connection.h '
+                         '/croot/python-split_1726164927291/work/Modules/_sqlite/cursor.h '
+                         '/croot/python-split_1726164927291/work/Modules/_sqlite/microprotocols.h '
+                         '/croot/python-split_1726164927291/work/Modules/_sqlite/module.h '
+                         '/croot/python-split_1726164927291/work/Modules/_sqlite/prepare_protocol.h '
+                         '/croot/python-split_1726164927291/work/Modules/_sqlite/row.h '
+                         '/croot/python-split_1726164927291/work/Modules/_sqlite/util.h',
  'MODULE__SQLITE3_LDFLAGS': '-L/media/ryxen/New Volume/MLprojects/venv/lib '
                             '-lsqlite3',
  'MODULE__SQLITE3_STATE': 'yes',
  'MODULE__SRE_LDFLAGS': '',
  'MODULE__SSL_CFLAGS': '-I/media/ryxen/New Volume/MLprojects/venv/include',
- 'MODULE__SSL_DEPS': '/croot/python-split_1696267002197/work/Modules/_ssl.h '
-                     '/croot/python-split_1696267002197/work/Modules/_ssl/cert.c '
-                     '/croot/python-split_1696267002197/work/Modules/_ssl/debughelpers.c '
-                     '/croot/python-split_1696267002197/work/Modules/_ssl/misc.c '
-                     '/croot/python-split_1696267002197/work/Modules/_ssl_data.h '
-                     '/croot/python-split_1696267002197/work/Modules/_ssl_data_111.h '
-                     '/croot/python-split_1696267002197/work/Modules/_ssl_data_300.h '
-                     '/croot/python-split_1696267002197/work/Modules/socketmodule.h',
+ 'MODULE__SSL_DEPS': '/croot/python-split_1726164927291/work/Modules/_ssl.h '
+                     '/croot/python-split_1726164927291/work/Modules/_ssl/cert.c '
+                     '/croot/python-split_1726164927291/work/Modules/_ssl/debughelpers.c '
+                     '/croot/python-split_1726164927291/work/Modules/_ssl/misc.c '
+                     '/croot/python-split_1726164927291/work/Modules/_ssl_data.h '
+                     '/croot/python-split_1726164927291/work/Modules/_ssl_data_111.h '
+                     '/croot/python-split_1726164927291/work/Modules/_ssl_data_300.h '
+                     '/croot/python-split_1726164927291/work/Modules/socketmodule.h',
  'MODULE__SSL_LDFLAGS': '-L/media/ryxen/New Volume/MLprojects/venv/lib  '
                         '-lssl -lcrypto',
  'MODULE__SSL_STATE': 'yes',
@@ -1168,9 +1178,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__STRUCT_STATE': 'yes',
  'MODULE__SYMTABLE_LDFLAGS': '',
  'MODULE__TESTBUFFER_STATE': 'yes',
- 'MODULE__TESTCAPI_DEPS': '/croot/python-split_1696267002197/work/Modules/_testcapi/testcapi_long.h '
-                          '/croot/python-split_1696267002197/work/Modules/_testcapi/parts.h '
-                          '/croot/python-split_1696267002197/work/Modules/_testcapi/util.h',
+ 'MODULE__TESTCAPI_DEPS': '/croot/python-split_1726164927291/work/Modules/_testcapi/testcapi_long.h '
+                          '/croot/python-split_1726164927291/work/Modules/_testcapi/parts.h '
+                          '/croot/python-split_1726164927291/work/Modules/_testcapi/util.h',
  'MODULE__TESTCAPI_STATE': 'yes',
  'MODULE__TESTCLINIC_STATE': 'yes',
  'MODULE__TESTIMPORTMULTIPLE_STATE': 'yes',
@@ -1234,10 +1244,10 @@ build_time_vars = {'ABIFLAGS': '',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_BUILTIN_HASHLIB_HASHES': '"md5,sha1,sha2,sha3,blake2"',
- 'PY_BUILTIN_MODULE_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
-                             '-march=nocona -mtune=haswell -ftree-vectorize '
-                             '-fPIC -fstack-protector-strong -fno-plt -O2 '
-                             '-ffunction-sections -pipe -isystem '
+ 'PY_BUILTIN_MODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 '
+                             '-Wall -march=nocona -mtune=haswell '
+                             '-ftree-vectorize -fPIC -fstack-protector-strong '
+                             '-fno-plt -O2 -ffunction-sections -pipe -isystem '
                              '/media/ryxen/New Volume/MLprojects/venv/include '
                              ' '
                              ' '
@@ -1253,13 +1263,16 @@ build_time_vars = {'ABIFLAGS': '',
                              '  '
                              '-fno-semantic-interposition  '
                              '  '
-                             ' -g -std=c11 '
+                             ' -g -std=c11 -Wextra '
+                             '-Wno-unused-parameter '
+                             '-Wno-missing-field-initializers '
+                             '-Wstrict-prototypes '
                              '-Werror=implicit-function-declaration '
                              '-fvisibility=hidden  '
                              ' '
-                             '-I/croot/python-split_1696267002197/work/Include/internal '
+                             '-I/croot/python-split_1726164927291/work/Include/internal '
                              '-IObjects -IInclude -IPython -I. '
-                             '-I/croot/python-split_1696267002197/work/Include '
+                             '-I/croot/python-split_1726164927291/work/Include '
                              '-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem '
                              '/media/ryxen/New Volume/MLprojects/venv/include '
                              '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -1267,9 +1280,10 @@ build_time_vars = {'ABIFLAGS': '',
                              '/media/ryxen/New Volume/MLprojects/venv/include '
                              '-I/media/ryxen/New Volume/MLprojects/venv/include '
                              '-DPy_BUILD_CORE_BUILTIN',
- 'PY_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall -march=nocona '
-              '-mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong '
-              '-fno-plt -O2 -ffunction-sections -pipe -isystem '
+ 'PY_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall '
+              '-march=nocona -mtune=haswell -ftree-vectorize -fPIC '
+              '-fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe '
+              '-isystem '
               '/media/ryxen/New Volume/MLprojects/venv/include '
               ' '
               ' '
@@ -1284,12 +1298,14 @@ build_time_vars = {'ABIFLAGS': '',
               '',
  'PY_CFLAGS_NODIST': '-fno-semantic-interposition   '
                      '  -g -std=c11 '
+                     '-Wextra -Wno-unused-parameter '
+                     '-Wno-missing-field-initializers -Wstrict-prototypes '
                      '-Werror=implicit-function-declaration '
                      '-fvisibility=hidden   '
-                     '-I/croot/python-split_1696267002197/work/Include/internal',
+                     '-I/croot/python-split_1726164927291/work/Include/internal',
  'PY_COERCE_C_LOCALE': 1,
- 'PY_CORE_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall -march=nocona '
-                   '-mtune=haswell -ftree-vectorize -fPIC '
+ 'PY_CORE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall '
+                   '-march=nocona -mtune=haswell -ftree-vectorize -fPIC '
                    '-fstack-protector-strong -fno-plt -O2 -ffunction-sections '
                    '-pipe -isystem '
                    '/media/ryxen/New Volume/MLprojects/venv/include '
@@ -1305,11 +1321,13 @@ build_time_vars = {'ABIFLAGS': '',
                    '   '
                    ' -fno-semantic-interposition  '
                    '   '
-                   '-g -std=c11 -Werror=implicit-function-declaration '
-                   '-fvisibility=hidden   '
-                   '-I/croot/python-split_1696267002197/work/Include/internal '
+                   '-g -std=c11 -Wextra -Wno-unused-parameter '
+                   '-Wno-missing-field-initializers -Wstrict-prototypes '
+                   '-Werror=implicit-function-declaration -fvisibility=hidden '
+                   '  '
+                   '-I/croot/python-split_1726164927291/work/Include/internal '
                    '-IObjects -IInclude -IPython -I. '
-                   '-I/croot/python-split_1696267002197/work/Include -DNDEBUG '
+                   '-I/croot/python-split_1726164927291/work/Include -DNDEBUG '
                    '-D_FORTIFY_SOURCE=2 -O2 -isystem '
                    '/media/ryxen/New Volume/MLprojects/venv/include '
                    '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -1330,7 +1348,7 @@ build_time_vars = {'ABIFLAGS': '',
                     '-fno-semantic-interposition   '
                     '  -g',
  'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
-                '-I/croot/python-split_1696267002197/work/Include -DNDEBUG '
+                '-I/croot/python-split_1726164927291/work/Include -DNDEBUG '
                 '-D_FORTIFY_SOURCE=2 -O2 -isystem '
                 '/media/ryxen/New Volume/MLprojects/venv/include '
                 '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -1366,9 +1384,9 @@ build_time_vars = {'ABIFLAGS': '',
  'PY_SQLITE_HAVE_SERIALIZE': 1,
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
- 'PY_STDMODULE_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall -march=nocona '
-                        '-mtune=haswell -ftree-vectorize -fPIC '
-                        '-fstack-protector-strong -fno-plt -O2 '
+ 'PY_STDMODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -O2 '
+                        '-Wall -march=nocona -mtune=haswell -ftree-vectorize '
+                        '-fPIC -fstack-protector-strong -fno-plt -O2 '
                         '-ffunction-sections -pipe -isystem '
                         '/media/ryxen/New Volume/MLprojects/venv/include '
                         ' '
@@ -1385,12 +1403,14 @@ build_time_vars = {'ABIFLAGS': '',
                         '  '
                         '-fno-semantic-interposition   '
                         '  -g -std=c11 '
+                        '-Wextra -Wno-unused-parameter '
+                        '-Wno-missing-field-initializers -Wstrict-prototypes '
                         '-Werror=implicit-function-declaration '
                         '-fvisibility=hidden  '
                         ' '
-                        '-I/croot/python-split_1696267002197/work/Include/internal '
+                        '-I/croot/python-split_1726164927291/work/Include/internal '
                         '-IObjects -IInclude -IPython -I. '
-                        '-I/croot/python-split_1696267002197/work/Include '
+                        '-I/croot/python-split_1726164927291/work/Include '
                         '-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem '
                         '/media/ryxen/New Volume/MLprojects/venv/include '
                         '-I/media/ryxen/New Volume/MLprojects/venv/include '
@@ -1402,6 +1422,7 @@ build_time_vars = {'ABIFLAGS': '',
  'Py_ENABLE_SHARED': 0,
  'Py_HASH_ALGORITHM': 0,
  'Py_STATS': 0,
+ 'Py_SUNOS_VERSION': 0,
  'Py_TRACE_REFS': 0,
  'QUICKTESTOPTS': '-x test_subprocess test_io test_lib2to3 \\',
  'RESSRCDIR': 'Mac/Resources/framework',
@@ -1519,7 +1540,7 @@ build_time_vars = {'ABIFLAGS': '',
             'Modules/_testcapi   Modules/_xxtestfuzz   Modules/cjkcodecs   '
             'Modules/expat   Objects   Parser   Programs   Python   '
             'Python/frozen_modules   Python/deepfreeze',
- 'SRC_GDB_HOOKS': '/croot/python-split_1696267002197/work/Tools/gdb/libpython.py',
+ 'SRC_GDB_HOOKS': '/croot/python-split_1726164927291/work/Tools/gdb/libpython.py',
  'STATIC_LIBPYTHON': 1,
  'STDC_HEADERS': 1,
  'STRICT_SYSV_CURSES': "/* Don't use ncurses extensions */",
@@ -1533,7 +1554,7 @@ build_time_vars = {'ABIFLAGS': '',
  'TESTPYTHON': './python -E',
  'TESTPYTHONOPTS': '',
  'TESTRUNNER': './python -E '
-               '/croot/python-split_1696267002197/work/Tools/scripts/run_tests.py',
+               '/croot/python-split_1726164927291/work/Tools/scripts/run_tests.py',
  'TESTSUBDIRS': 'idlelib/idle_test \\',
  'TESTTIMEOUT': 1200,
  'TEST_MODULES': 'yes',
@@ -1543,10 +1564,10 @@ build_time_vars = {'ABIFLAGS': '',
  'TZPATH': '/media/ryxen/New Volume/MLprojects/venv/share/zoneinfo:/media/ryxen/New Volume/MLprojects/venv/share/tzinfo',
  'UNICODE_DEPS': '\\',
  'UNIVERSALSDK': '',
- 'UPDATE_FILE': '/croot/python-split_1696267002197/work/Tools/build/update_file.py',
+ 'UPDATE_FILE': '/croot/python-split_1726164927291/work/Tools/build/update_file.py',
  'USE_COMPUTED_GOTOS': 1,
  'VERSION': '3.12',
- 'VPATH': '/croot/python-split_1696267002197/work',
+ 'VPATH': '/croot/python-split_1726164927291/work',
  'WASM_ASSETS_DIR': './media/ryxen/New Volume/MLprojects/venv',
  'WASM_STDLIB': './media/ryxen/New Volume/MLprojects/venv/lib/python3.12/os.py',
  'WHEEL_PKG_DIR': '',
@@ -1563,9 +1584,9 @@ build_time_vars = {'ABIFLAGS': '',
  'WITH_VALGRIND': 0,
  'X87_DOUBLE_ROUNDING': 0,
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
- 'abs_builddir': '/croot/python-split_1696267002197/work/build-static',
- 'abs_srcdir': '/croot/python-split_1696267002197/work',
+ 'abs_builddir': '/croot/python-split_1726164927291/work/build-static',
+ 'abs_srcdir': '/croot/python-split_1726164927291/work',
  'datarootdir': '/media/ryxen/New Volume/MLprojects/venv/share',
  'exec_prefix': '/media/ryxen/New Volume/MLprojects/venv',
  'prefix': '/media/ryxen/New Volume/MLprojects/venv',
- 'srcdir': '/croot/python-split_1696267002197/work'}
+ 'srcdir': '/croot/python-split_1726164927291/work'}

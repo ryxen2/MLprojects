@@ -49,10 +49,10 @@ specialsre = re.compile(r'[][\\()<>@,:;".]')
 escapesre = re.compile(r'[\\"]')
 
 def _has_surrogates(s):
-    """Return True if s contains surrogate-escaped binary data."""
+    """Return True if s may contain surrogate-escaped binary data."""
     # This check is based on the fact that unless there are surrogates, utf8
     # (Python's default encoding) can encode any string.  This is the fastest
-    # way to check for surrogates, see issue 11454 for timings.
+    # way to check for surrogates, see bpo-11454 (moved to gh-55663) for timings.
     try:
         s.encode()
         return False
@@ -128,7 +128,7 @@ def formatdate(timeval=None, localtime=False, usegmt=False):
 
     Fri, 09 Nov 2001 01:08:47 -0000
 
-    Optional timeval if given is a floating point time value as accepted by
+    Optional timeval if given is a floating-point time value as accepted by
     gmtime() and localtime(), otherwise the current time is used.
 
     Optional localtime is a flag that when True, interprets timeval, and

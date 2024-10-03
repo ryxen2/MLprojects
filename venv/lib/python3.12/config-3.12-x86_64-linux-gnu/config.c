@@ -1,4 +1,4 @@
-/* Generated automatically from /croot/python-split_1696267002197/work/Modules/config.c.in by makesetup. */
+/* Generated automatically from /croot/python-split_1726164927291/work/Modules/config.c.in by makesetup. */
 /* -*- C -*- ***********************************************
 Copyright (c) 2000, BeOpen.com.
 Copyright (c) 1995-2000, Corporation for National Research Initiatives.
